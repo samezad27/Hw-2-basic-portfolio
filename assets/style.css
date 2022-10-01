@@ -2,28 +2,77 @@
     box-sizing: border-box;
 }
 
+/*color pallet*/
+:root { 
+    --primary: black;
+    --secondary: white;
+    --hot: red;
+    --dark: black;
+    --light: white;
+}
+
 head {
     display: none;
-}
-
-section {
-}
-
-div {
 }
 
 body {
 }
 
+header {
+}
+
+header h1 {
+}
+
+nav {
+}
+
+nav a{
+}
+
+nav a:hover {
+}
+
 main {
 }
+
+/*banner*/
 
 .banner {
 }
 
-main {
+.banner div {
+}
+
+.banner h2 {
+}
+
+/*page*/
+
+.page-info {
 }
 
 .page-section {
 }
+
+.page-section > h2{
+}
+
+.page-section > div {
+}
+
+.page-section > p {
+}
+
+/*contact*/
+
+.contact address {
+}
+
+.contact  address a {
+}
+
+/* need to add flex*/
+
+
 
