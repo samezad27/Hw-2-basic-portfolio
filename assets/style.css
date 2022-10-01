@@ -1,24 +1,34 @@
 * {
     box-sizing: border-box;
+    font-style: italic;
+    font-family: fantasy;
 }
 
 /*color pallet*/
 :root { 
-    --primary: black;
-    --secondary: white;
-    --hot: red;
-    --dark: black;
-    --light: white;
-}
-
-head {
-    display: none;
+    --purple: rgb(76, 45, 96);
+    --yellow: rgb(228, 183, 77);
+    --blue: rgb(12, 123, 137);
+    --red: rgb(143, 47, 47);
+    --white: white;
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    color: var(--blue);
+    background-color:var(--yellow);
+    line-height: 1.5;
 }
 
 header {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    color: var(--white)
 }
 
 header h1 {
