@@ -7,7 +7,7 @@
 /*color pallet*/
 :root { 
     --purple: rgb(76, 45, 96);
-    --yellow: rgb(228, 183, 77);
+    --yellow: rgb(215, 189, 130);
     --blue: rgb(12, 123, 137);
     --red: rgb(143, 47, 47);
     --white: white;
@@ -28,16 +28,30 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--blue);
-    color: var(--white)
 }
 
 header h1 {
+    color: var(--white);
+    background-color: var(--purple);
+    padding: 5px;
+    margin: 0;
+    font-size: 4vw;
+    line-height: 1;
 }
 
 nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 nav a{
+    text-decoratio: none;
+    padding: 5px 10px;
+    color: var(--white);
+    margin-right: 10px;
+    /*need to add image stuff!!!*/
+
 }
 
 nav a:hover {
