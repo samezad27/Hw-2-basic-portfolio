@@ -1,13 +1,13 @@
 * {
     box-sizing: border-box;
     font-style: italic;
-    font-family: fantasy;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /*color pallet*/
 :root { 
     --purple: rgb(76, 45, 96);
-    --yellow: rgb(213, 202, 176);
+    --yellow: rgb(0, 0, 0);
     --blue: rgb(12, 123, 137);
     --red: rgb(143, 47, 47);
     --white: white;
@@ -16,9 +16,22 @@
 body {
     margin: 0;
     padding: 0;
-    color: var(--blue);
+    color: var(--white);
     background-color:var(--yellow);
     line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 header {
@@ -27,12 +40,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--blue);
+    background-color: var(--yellow);
 }
 
 header h1 {
     color: var(--white);
-    background-color: var(--purple);
     padding: 5px;
     margin: 0;
     font-size: 4vw;
@@ -43,6 +55,7 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color:rgb(12, 123, 137)
 }
 
 nav a {
@@ -100,29 +113,115 @@ main {
 /*page*/
 
 .page-info {
+    max-width:90%;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 .page-section {
+    margin: 10px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
 .page-section > h2{
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 10px;
+    border-right: 4px solid var(--blue);
+    line-height: 2;
+
 }
 
 .page-section > div {
+    flex 0 0 80%;
 }
 
 .page-section > p {
+    margin-bottom: 20px
 }
 
 /*contact*/
 
-.contact address {
+#contact address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
 
-.contact  address a {
+#contact address a {
+    color: var(--white);
+    padding: 5px;
+    text-decoration: none;
+
 }
 
 /* need to add flex*/
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-item {
+    border: 3px solid var(--white);
+    display: flex;
+    align-items: flex-end;
+    color: var(--white);
+    min-height: 150px;
+    max-height: 150px;
+    flex-basis: calc(50% -1em);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 0.5em;
+    background-size: 150%;
+}
+
+.flex-item:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
+}
+
+.flex-item:hover {
+    background-color: var(--blue);
+}
+
+
+/*add images*/
+
+.data-collection {
+    background-image: url("../images/space1.jpg");
+    
+}
+
+.data-cleaning {
+    background-image: url("../images/space2.jpg");
+}
+
+.data-analysis {
+    background-image: url("../images/space3.jpg");
+}
+
+.data-story {
+    background-image: url("../images/space4.jpg");
+}
+
+.data-decision {
+    background-image: url("../images/banner-image.jpg");
+}
+
+/*end images*/
+
+
+
+/*add media/*
 
 
