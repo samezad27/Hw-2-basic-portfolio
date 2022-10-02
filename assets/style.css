@@ -7,7 +7,7 @@
 /*color pallet*/
 :root { 
     --purple: rgb(76, 45, 96);
-    --yellow: rgb(215, 189, 130);
+    --yellow: rgb(213, 202, 176);
     --blue: rgb(12, 123, 137);
     --red: rgb(143, 47, 47);
     --white: white;
@@ -45,8 +45,8 @@ nav {
     flex-wrap: wrap;
 }
 
-nav a{
-    text-decoratio: none;
+nav a {
+    text-decoration: none;
     padding: 5px 10px;
     color: var(--white);
     margin-right: 10px;
@@ -55,20 +55,46 @@ nav a{
 }
 
 nav a:hover {
+    background-size: 50% 50%;
+    color: var(--white)
 }
 
 main {
+    margin-top:50px;
+    margin-bottom: 50px
 }
 
 /*banner*/
 
 .banner {
+    background:rgb(143, 47, 47);
+    background-image: url("../images/banner-image.jpg"), linear-gradient(180deg, var(--purple), 0%, var(--white) 100%);
+    background-size: cover;
+    background-position: center;
+    min-height:20vh;
+    /*flex*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 2%, 6%;
+    
+    
 }
 
+/*
 .banner div {
+    
+    flex: 0 0 90%;
+    
 }
+*/
 
 .banner h2 {
+    color: var(--white);
+    margin: 0;
+    padding: 20px 20px;
+    line-height: 1.5;
+    display: inline;
 }
 
 /*page*/
