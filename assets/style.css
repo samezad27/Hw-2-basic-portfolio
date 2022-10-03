@@ -68,20 +68,21 @@ nav a {
     padding: 5px 10px;
     color: var(--white);
     margin-right: 10px;
+    background-clip: text;
+    -webkit-background-clip: text;
     background-image: linear-gradient(var(--blue), var(--blue));
     background-size: 0 100%;
     background-position: right;
     background-repeat: no-repeat;
     /*need to add image stuff!!!*/
-    transition: all 0.25s ease-in;
+    transition: all 0.5s ease-in;
     font-size: 1.4rem;
-
 
 }
 
 nav a:hover {
     background-size: 100% 100%;
-    color: white;
+    color: transparent;
 }
 
 main {
