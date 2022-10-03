@@ -6,7 +6,7 @@
 }
 
 /*color pallet*/
-:root { 
+:root {
     --purple: rgb(76, 45, 96);
     --yellow: rgb(0, 0, 0);
     --blue: rgb(12, 123, 137);
@@ -18,7 +18,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--white);
-    background-color:var(--yellow);
+    background-color: var(--yellow);
     line-height: 1.5;
 }
 
@@ -45,18 +45,22 @@ header {
 }
 
 header h1 {
-    color: var(--white);
+    /* color: var(--white); */
     padding: 5px;
     margin: 0;
     font-size: 4vw;
     line-height: 1;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--purple), var(--red));
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+
 }
 
 nav a {
@@ -64,42 +68,42 @@ nav a {
     padding: 5px 10px;
     color: var(--white);
     margin-right: 10px;
-    background-image: linear-gradient(white, white);
-    background-size: 100% 0.25em;
-    background-position: bottom;
+    background-image: linear-gradient(var(--blue), var(--blue));
+    background-size: 0 100%;
+    background-position: right;
     background-repeat: no-repeat;
     /*need to add image stuff!!!*/
     transition: all 0.25s ease-in;
     font-size: 1.4rem;
-   
+
 
 }
 
 nav a:hover {
     background-size: 100% 100%;
-    color: black;
+    color: white;
 }
 
 main {
-    margin-top:50px;
+    margin-top: 50px;
     margin-bottom: 50px
 }
 
 /*banner*/
 
 .banner {
-    background:rgb(143, 47, 47);
+    background: rgb(143, 47, 47);
     background-image: url("../images/banner-image.jpg"), linear-gradient(180deg, var(--purple), 0%, var(--white) 100%);
     background-size: cover;
     background-position: center;
-    min-height:20vh;
+    min-height: 20vh;
     /*flex*/
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     padding: 2%, 6%;
-    
-    
+
+
 }
 
 /*
@@ -121,8 +125,8 @@ main {
 /*page*/
 
 .page-main {
-    max-width:88%;
-    margin-left:auto;
+    max-width: 88%;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -136,7 +140,7 @@ main {
     justify-content: space-between;
 }
 
-.page-section > h2{
+.page-section>h2 {
     flex: 0 0 20%;
     text-align: right;
     padding-right: 10px;
@@ -145,7 +149,7 @@ main {
 
 }
 
-.page-section > div {
+.page-section>div {
     padding-left: 30px;
     flex: 0 0 80%;
 }
@@ -168,7 +172,20 @@ main {
     color: var(--white);
     padding: 5px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
 
+.svg-container {
+    display: flex;
+    align-items: center;
+    margin: 4px;
+    font-size: 24px;
+    color: white;
+}
+
+address a:hover .svg-container {
+    animation: grow-shrink 1s infinite;
 }
 
 /* need to add flex*/
@@ -193,9 +210,9 @@ main {
     margin: 0.5em 0;
     width: 22%;
     background-size: 150%;
-    position:relative;
+    position: relative;
     top: 0px;
-    transition: all 300ms cubic-bezier(.17,.67,.41,1.35);
+    transition: all 300ms cubic-bezier(.17, .67, .41, 1.35);
 }
 
 .flex-item:first-child {
@@ -214,7 +231,7 @@ main {
 
 .data-collection {
     background-image: url("../images/space1.jpg");
-    
+
 }
 
 .data-cleaning {
@@ -240,58 +257,74 @@ main {
 /*add media*/
 
 @media screen and (max-width: 980px) {
-  header {
-    padding: 0 0 10px 0;
-    justify-content: center;
-    text-align: center;
-  }
+    header {
+        padding: 0 0 10px 0;
+        justify-content: center;
+        text-align: center;
+    }
 
-  header h1 {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    font-size: 10vw;
-  }
+    header h1 {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 10vw;
+    }
 
-  header nav {
-    justify-content: center;
-  }
+    header nav {
+        justify-content: center;
+    }
 
-  .page-section > h2,
-  .page-section > div {
-    flex: 0 0 100%;
-    padding-left: 0;
-  }
+    .page-section>h2,
+    .page-section>div {
+        flex: 0 0 100%;
+        padding-left: 0;
+    }
 
-  .page-section > h2 {
-    border-right: none;
-    border-bottom: 4px solid var(--white);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    text-align: left;
-    font-size: 7vw;
-  }
+    .page-section>h2 {
+        border-right: none;
+        border-bottom: 4px solid var(--white);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        text-align: left;
+        font-size: 7vw;
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .flex-item,
-  .flex-item:first-child {
-    flex-basis: 100%;
-  }
 
-  .flex-item:first-child {
-    min-height: 150px;
-  }
+    .flex-item,
+    .flex-item:first-child {
+        flex-basis: 100%;
+    }
 
-  .hero-banner {
-    justify-content: center;
-    text-align: center;
-  }
+    .flex-item:first-child {
+        min-height: 150px;
+    }
 
-  .contact address {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .hero-banner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 
+/* keyframes animation */
+
+@keyframes grow-shrink {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.2)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
